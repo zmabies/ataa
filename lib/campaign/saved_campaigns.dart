@@ -3,6 +3,9 @@ import 'package:ataa/util/navigation_util.dart';
 import 'package:flutter/material.dart';
 
 class SavedCampaigns extends StatefulWidget {
+  final String title;
+
+  const SavedCampaigns({Key key, this.title = "Saved campaigns"}) : super(key: key);
   @override
   _SavedCampaignsState createState() => _SavedCampaignsState();
 }
@@ -50,7 +53,7 @@ class _SavedCampaignsState extends State<SavedCampaigns> {
               LinearGradient(colors: [AppColors.lilac, AppColors.dustyBlue])),
       child: Padding(
         padding: const EdgeInsets.only(bottom: 15, left: 20),
-        child: Text("Saved campaigns",
+        child: Text(widget.title,
             style: TextStyle(fontSize: Dimens.mid, color: AppColors.white)),
       ),
     );

@@ -1,6 +1,8 @@
 import 'package:ataa/account/login_page.dart';
+import 'package:ataa/profile/profile.dart';
 import 'package:flutter/material.dart';
 
+import 'account/login_and_signup_page.dart';
 import 'account/signup_page.dart';
 import 'campaign/campaign_details.dart';
 import 'campaign/saved_campaigns.dart';
@@ -36,7 +38,7 @@ class _HomeState extends State<Home> {
   int _currentIndex = 0;
   final List<Widget> _children = [
     HomePage(),
-    LoginPage(),
+    ProfilePage(),
     SavedCampaigns(),
   ];
   @override
